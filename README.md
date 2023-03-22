@@ -2,7 +2,7 @@
 
 UltraFastLaneDetection 部署版本，后处理用python语言和C++语言形式进行改写，便于移植不同平台（caffe、onnx、rknn、Horizon）。
 
-由于模型较大，无法放在仓库中，完整代码放在 UltraFastLaneDetection.zip。[完整代码](https://github.com/cqu20160901/UltraFastLaneDetection_caffe_onnx_horizon_rknn/releases/download/v1.0.0/UltraFastLaneDetection.zip)
+由于模型较大，无法放在仓库中，完整代码放在 UltraFastLaneDetection.zip。[完整代码](https://github.com/cqu20160901/Ultra-Fast-Lane-Detection_caffe_onnx_horizon_rknn/releases/download/v1.0.0/UltraFastLaneDetection.zip)
 
 # 文件夹结构说明
 LaneDet_caffe：去除维度变换层的prototxt、caffeModel、测试图像、测试结果、测试demo脚本
@@ -15,7 +15,7 @@ LaneDet_horizon：地平线模型、测试（量化）图像、测试结果、�
 
 # 测试结果
 
-![image](https://github.com/cqu20160901/Ultra-Fast-Lane-Detection_caffe_onnx_horizon_rknn/releases/download/v1.0.0/UltraFastLaneDetection.zip)
+![image](https://github.com/cqu20160901/Ultra-Fast-Lane-Detection_caffe_onnx_horizon_rknn/blob/main/LaneDet_caffe/test_result_caffe_zq.jpg)
 
 # 参考链接
 https://github.com/cfzd/Ultra-Fast-Lane-Detection
