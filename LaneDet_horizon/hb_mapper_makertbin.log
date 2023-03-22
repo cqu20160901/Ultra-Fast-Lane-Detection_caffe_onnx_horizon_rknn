@@ -1,0 +1,204 @@
+2023-03-22 14:12:04,526 file: hb_mapper.py func: hb_mapper line No: 111 Start hb_mapper....
+2023-03-22 14:12:04,527 file: hb_mapper.py func: hb_mapper line No: 112 log will be stored in /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/hb_mapper_makertbin.log
+2023-03-22 14:12:04,527 file: hb_mapper.py func: hb_mapper line No: 113 hbdk version 3.27.4
+2023-03-22 14:12:04,527 file: hb_mapper.py func: hb_mapper line No: 114 horizon_nn version 0.13.3
+2023-03-22 14:12:04,527 file: hb_mapper.py func: hb_mapper line No: 115 hb_mapper version 1.6.8a
+2023-03-22 14:12:04,527 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 590 Start Model Convert....
+2023-03-22 14:12:04,540 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/model/lane.onnx
+2023-03-22 14:12:04,541 file: mapper_conf_parser.py func: mapper_conf_parser line No: 137 validating model_parameters...
+2023-03-22 14:12:04,666 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/model_output
+2023-03-22 14:12:04,666 file: mapper_conf_parser.py func: mapper_conf_parser line No: 149 validating model_parameters finished
+2023-03-22 14:12:04,666 file: mapper_conf_parser.py func: mapper_conf_parser line No: 153 validating input_parameters...
+2023-03-22 14:12:04,666 file: helper.py func: helper line No: 124 Model input names: ['input_input']
+2023-03-22 14:12:04,666 file: mapper_conf_parser.py func: mapper_conf_parser line No: 273 input num is set to 1 according to input_names
+2023-03-22 14:12:04,666 file: mapper_conf_parser.py func: mapper_conf_parser line No: 279 model name missing, using model name from model file: ['input_input']
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 325 model input shape missing, using shape from model file: [[1, 3, 288, 800]]
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 164 validating input_parameters finished
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 168 validating calibration_parameters...
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 811 Using abs path /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/cal_data
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 182 validating calibration_parameters finished
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 186 validating custom_op...
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 724 custom_op does not exist, skipped
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 192 validating custom_op finished
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 195 validating compiler_parameters...
+2023-03-22 14:12:04,667 file: mapper_conf_parser.py func: mapper_conf_parser line No: 201 validating compiler_parameters finished
+2023-03-22 14:12:04,667 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 56 Dump config:
+2023-03-22 14:12:04,667 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 57 calibration_parameters:
+  cal_data_dir: ./cal_data
+  calibration_type: default
+  preprocess_on: true
+compiler_parameters:
+  compile_mode: latency
+  debug: false
+  optimize_level: O3
+input_parameters:
+  input_layout_rt: NCHW
+  input_layout_train: NCHW
+  input_name: ''
+  input_shape: ''
+  input_type_rt: rgb
+  input_type_train: rgb
+  mean_value: 123 114 107
+  norm_type: data_mean_and_scale
+  scale_value: 0.017241 0.017543 0.017543
+model_parameters:
+  layer_out_dump: false
+  log_level: debug
+  march: bernoulli2
+  onnx_model: /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/model/lane.onnx
+  output_model_file_prefix: lane
+  working_dir: model_output
+
+2023-03-22 14:12:04,671 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 63 input 'input_input' : original model shape: [1, 3, 288, 800]
+2023-03-22 14:12:04,671 file: loader.py func: loader line No: 44 *******************************************
+2023-03-22 14:12:04,671 file: loader.py func: loader line No: 45 First calibration picture name: test.jpg
+2023-03-22 14:12:04,671 file: loader.py func: loader line No: 47 First calibration picture md5:
+2023-03-22 14:12:04,689 file: loader.py func: loader line No: 51 *******************************************
+2023-03-22 14:12:04,843 file: tool_utils.py func: tool_utils line No: 320 calibration data shape: (1, 3, 288, 800)
+2023-03-22 14:12:04,845 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 579 call build params:
+ {'march': 'bernoulli2', 'debug_mode': False, 'save_model': True, 'name_prefix': 'lane', 'input_dict': {'input_input': {'input_shape': [1, 3, 288, 800], 'expected_input_type': 'RGB_128', 'original_input_type': 'RGB', 'original_input_layout': 'NCHW', 'means': array([123., 114., 107.], dtype=float32), 'scales': array([0.017241, 0.017543, 0.017543], dtype=float32)}}, 'cali_dict': {'calibration_type': 'default', 'calibration_data': {'input_input': array([[[[ 116.86578 ,  116.52632 ,  114.01439 , ...,  -79.804214,
+           -79.91438 ,  -78.74589 ],
+         [ 116.30864 ,  117.02307 ,  115.18434 , ...,  -75.37114 ,
+           -74.547455,  -77.48181 ],
+         [  47.269028,   88.53032 ,  106.43503 , ...,  -69.79011 ,
+           -76.15689 ,  -81.58008 ],
+         ...,
+         [ -91.95317 ,  -91.953064,  -91.73837 , ..., -105.18646 ,
+          -105.375404, -105.8076  ],
+         [ -91.06697 ,  -91.02435 ,  -91.026375, ..., -104.94559 ,
+          -106.407135, -107.80298 ],
+         [ -90.543625,  -90.15843 ,  -90.95659 , ..., -103.95239 ,
+          -106.18953 , -108.356384]],
+
+        [[ 124.86632 ,  124.4966  ,  121.30716 , ...,  -80.804214,
+           -80.91438 ,  -79.74589 ],
+         [ 125.493835,  126.19719 ,  123.930176, ...,  -76.37114 ,
+           -75.547455,  -78.482056],
+         [  58.327576,  100.63043 ,  119.19449 , ...,  -70.7901  ,
+           -77.1696  ,  -83.22989 ],
+         ...,
+         [ -91.95317 ,  -91.953064,  -91.73837 , ...,  -99.18646 ,
+           -99.375404,  -99.80788 ],
+         [ -91.06697 ,  -91.02435 ,  -91.026375, ...,  -98.94559 ,
+          -100.407135, -101.80298 ],
+         [ -90.543625,  -90.15843 ,  -90.95659 , ...,  -97.95239 ,
+          -100.18953 , -102.356384]],
+
+        [[ 126.06651 ,  126.42407 ,  125.55838 , ..., -110.804214,
+          -110.96709 , -110.68063 ],
+         [ 126.401245,  126.85872 ,  125.23334 , ..., -106.37115 ,
+          -105.60016 , -109.41666 ],
+         [  62.77101 ,  103.07889 ,  119.777145, ..., -100.7901  ,
+          -107.18708 , -113.75752 ],
+         ...,
+         [ -81.95317 ,  -81.953064,  -81.73837 , ...,  -73.18646 ,
+           -73.37541 ,  -73.80774 ],
+         [ -81.06697 ,  -81.02435 ,  -81.02638 , ...,  -72.94559 ,
+           -74.407135,  -75.80297 ],
+         [ -80.543625,  -80.15843 ,  -80.95659 , ...,  -71.95239 ,
+           -74.18953 ,  -76.356384]]]], dtype=float32)}}, 'hbdk_dict': {'hbdk_pass_through_params': '--fast --O3', 'input-source': {'input_input': 'ddr', '_default_value': 'ddr'}}, 'node_dict': {}}
+2023-03-22 14:12:04,856 file: build.py func: build line No: 36 [Wed Mar 22 14:12:04 2023] Start to Horizon NN Model Convert.
+2023-03-22 14:12:04,856 file: dict_parser.py func: dict_parser line No: 32 Parsing the input parameter:{'input_input': {'input_shape': [1, 3, 288, 800], 'expected_input_type': 'RGB_128', 'original_input_type': 'RGB', 'original_input_layout': 'NCHW', 'means': array([123., 114., 107.], dtype=float32), 'scales': array([0.017241, 0.017543, 0.017543], dtype=float32)}}
+2023-03-22 14:12:04,856 file: build.py func: build line No: 237 Parsing the calibration parameter
+2023-03-22 14:12:04,856 file: dict_parser.py func: dict_parser line No: 518 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--fast --O3', 'input-source': {'input_input': 'ddr', '_default_value': 'ddr'}}
+2023-03-22 14:12:04,856 file: build.py func: build line No: 143 HorizonNN version: 0.13.3
+2023-03-22 14:12:04,857 file: build.py func: build line No: 147 HBDK version: 3.27.4
+2023-03-22 14:12:04,857 file: build.py func: build line No: 36 [Wed Mar 22 14:12:04 2023] Start to parse the onnx model.
+2023-03-22 14:12:05,540 file: onnx_parser.py func: onnx_parser line No: 146 ONNX model info:
+ONNX IR version:  6
+Opset version:    11
+Input name:       input_input, [1, 3, 288, 800]
+2023-03-22 14:12:06,853 file: build.py func: build line No: 39 [Wed Mar 22 14:12:06 2023] End to parse the onnx model.
+2023-03-22 14:12:06,857 file: build.py func: build line No: 266 Model input names: ['input_input']
+2023-03-22 14:12:06,858 file: dict_parser.py func: dict_parser line No: 288 Create a preprocessing operator for input_name input_input with means=[123. 114. 107.], std=[58.0012785  57.00279561 57.00279561], original_input_layout=NCHW, color convert from 'RGB' to 'RGB'.
+2023-03-22 14:12:07,771 file: build.py func: build line No: 537 Saving the original float model: lane_original_float_model.onnx.
+2023-03-22 14:12:07,771 file: build.py func: build line No: 36 [Wed Mar 22 14:12:07 2023] Start to optimize the model.
+2023-03-22 14:12:14,988 file: build.py func: build line No: 39 [Wed Mar 22 14:12:14 2023] End to optimize the model.
+2023-03-22 14:12:15,185 file: build.py func: build line No: 548 Saving the optimized model: lane_optimized_float_model.onnx.
+2023-03-22 14:12:15,185 file: build.py func: build line No: 36 [Wed Mar 22 14:12:15 2023] Start to calibrate the model.
+2023-03-22 14:12:17,677 file: calibration_data_set.py func: calibration_data_set line No: 67 There are 1 samples in the calibration data set.
+2023-03-22 14:12:18,574 file: default_calibrater.py func: default_calibrater line No: 145 Run calibration model with default calibration method.
+2023-03-22 14:13:16,886 file: default_calibrater.py func: default_calibrater line No: 169 Select max method.
+2023-03-22 14:13:17,335 file: build.py func: build line No: 39 [Wed Mar 22 14:13:17 2023] End to calibrate the model.
+2023-03-22 14:13:17,335 file: build.py func: build line No: 36 [Wed Mar 22 14:13:17 2023] Start to quantize the model.
+2023-03-22 14:13:34,316 file: build.py func: build line No: 39 [Wed Mar 22 14:13:34 2023] End to quantize the model.
+2023-03-22 14:13:35,661 file: build.py func: build line No: 562 Saving the quantized model: lane_quantized_model.onnx.
+2023-03-22 14:13:35,661 file: build.py func: build line No: 36 [Wed Mar 22 14:13:35 2023] Start to compile the model with march bernoulli2.
+2023-03-22 14:13:37,572 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: ./lane.onnx_subgraph_0
+2023-03-22 14:13:38,404 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--fast', '--O3', '--input-layout', 'NHWC', '--output-layout', 'NCHW', '--input-source', 'ddr']
+2023-03-22 14:14:05,267 file: tool_utils.py func: tool_utils line No: 293 consumed time 26.799
+2023-03-22 14:14:05,524 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: ./lane.onnx_subgraph_1
+2023-03-22 14:14:07,760 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--fast', '--O3', '--input-layout', 'NHWC', '--output-layout', 'NCHW', '--input-source', 'ddr']
+2023-03-22 14:14:10,595 file: tool_utils.py func: tool_utils line No: 293 consumed time 2.77167
+2023-03-22 14:14:11,922 file: build.py func: build line No: 39 [Wed Mar 22 14:14:11 2023] End to compile the model with march bernoulli2.
+2023-03-22 14:14:11,927 file: node_info.py func: node_info line No: 54 The converted model node information:
+====================================================================================================================
+Node                           ON   Subgraph  Type                    Cosine Similarity  Threshold                   
+---------------------------------------------------------------------------------------------------------------------
+HZ_PREPROCESS_FOR_input_input  BPU  id(0)     HzSQuantizedPreprocess  0.999874           127.000000                  
+127                            BPU  id(0)     HzSQuantizedConv        0.999769           2.596364                    
+130                            BPU  id(0)     HzQuantizedMaxPool      0.999809           3.757833                    
+131                            BPU  id(0)     HzSQuantizedConv        0.999316           3.757833                    
+134                            BPU  id(0)     HzSQuantizedConv        0.999241           2.726706                    
+138                            BPU  id(0)     HzSQuantizedConv        0.997415           4.658956                    
+141                            BPU  id(0)     HzSQuantizedConv        0.997858           2.176999                    
+145                            BPU  id(0)     HzSQuantizedConv        0.995187           6.182318                    
+148                            BPU  id(0)     HzSQuantizedConv        0.996636           2.861637                    
+150                            BPU  id(0)     HzSQuantizedConv        0.996590           6.182318                    
+154                            BPU  id(0)     HzSQuantizedConv        0.995338           4.281620                    
+157                            BPU  id(0)     HzSQuantizedConv        0.996263           2.229580                    
+161                            BPU  id(0)     HzSQuantizedConv        0.996799           4.998595                    
+164                            BPU  id(0)     HzSQuantizedConv        0.998010           2.702949                    
+166                            BPU  id(0)     HzSQuantizedConv        0.996919           4.998595                    
+170                            BPU  id(0)     HzSQuantizedConv        0.996253           2.998292                    
+173                            BPU  id(0)     HzSQuantizedConv        0.996257           1.254644                    
+177                            BPU  id(0)     HzSQuantizedConv        0.995472           2.498272                    
+180                            BPU  id(0)     HzSQuantizedConv        0.997896           0.805104                    
+182                            BPU  id(0)     HzSQuantizedConv        0.994580           2.498272                    
+186                            BPU  id(0)     HzSQuantizedConv        0.994225           1.125862                    
+189                            BPU  id(0)     HzSQuantizedConv        0.997183           0.788765                    
+193                            BPU  id(0)     HzSQuantizedConv        0.997530           4.857860                    
+195                            CPU  --        Reshape                 0.997529           43.261093                   
+196                            BPU  id(1)     HzSQuantizedConv        0.999131           43.261093                   
+198                            BPU  id(1)     HzSQuantizedConv        0.999778           41.238045                   
+198_reshape_0                  CPU  --        Reshape                 0.999778           --
+2023-03-22 14:14:11,927 file: build.py func: build line No: 39 [Wed Mar 22 14:14:11 2023] End to Horizon NN Model Convert.
+2023-03-22 14:14:12,459 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 641 start convert to *.bin file....
+2023-03-22 14:14:12,507 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2841 ONNX model output num : 1
+2023-03-22 14:14:12,507 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2717 ############# model deps info #############
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2719 hb_mapper version   : 1.6.8a
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2722 hbdk version        : 3.27.4
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2724 hbdk runtime version: 3.13.27
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2727 horizon_nn version  : 0.13.3
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2730 ############# model_parameters info #############
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2736 onnx_model          : /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/model/lane.onnx
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2737 BPU march           : bernoulli2
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2738 layer_out_dump      : False
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2739 log_level           : DEBUG
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2740 working dir         : /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/model_output
+2023-03-22 14:14:12,508 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2741 output_model_file_prefix: lane
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2748 ############# input_parameters info #############
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2765 ------------------------------------------
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2767 ---------input info : input_input ---------
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2768 input_name          : input_input
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2769 input_type_rt       : rgb
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2772 input_space&range   : regular
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2773 input_layout_rt     : NCHW
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2774 input_type_train    : rgb
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2775 input_layout_train  : NCHW
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2776 norm_type           : data_mean_and_scale
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2777 input_shape         : 1x3x288x800
+2023-03-22 14:14:12,509 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2781 mean_value          : 123.0,114.0,107.0,
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2783 scale_value         : 0.017241,0.017543,0.017543,
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2785 cal_data_dir        : /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/cal_data
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2786 ---------input info : input_input end -------
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2787 ------------------------------------------
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2789 ############# calibration_parameters info #############
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2790 preprocess_on       : True
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2791 calibration_type:   : default
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2815 ############# compiler_parameters info #############
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2819 hbdk_pass_through_params: --fast --O3
+2023-03-22 14:14:12,510 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2819 input-source        : {'input_input': 'ddr', '_default_value': 'ddr'}
+2023-03-22 14:14:12,535 file: layout_util.py func: layout_util line No: 13 set_featuremap_layout start
+2023-03-22 14:14:12,558 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 768 Convert to runtime bin file sucessfully!
+2023-03-22 14:14:12,559 file: hb_mapper_makertbin.py func: hb_mapper_makertbin line No: 769 End Model Convert

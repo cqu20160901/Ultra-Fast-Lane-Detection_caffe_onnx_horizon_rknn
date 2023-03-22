@@ -1,0 +1,75 @@
+2023-03-22 14:06:29,041 file: hb_mapper.py func: hb_mapper line No: 70 Start hb_mapper....
+2023-03-22 14:06:29,042 file: hb_mapper.py func: hb_mapper line No: 71 log will be stored in /convert_model/horizon_model_convert_sample/04_detection/08_UltraFastLaneDetection/mapper/hb_mapper_checker.log
+2023-03-22 14:06:29,042 file: hb_mapper.py func: hb_mapper line No: 72 hbdk version 3.27.4
+2023-03-22 14:06:29,042 file: hb_mapper.py func: hb_mapper line No: 73 horizon_nn version 0.13.3
+2023-03-22 14:06:29,042 file: hb_mapper.py func: hb_mapper line No: 74 hb_mapper version 1.6.8a
+2023-03-22 14:06:29,042 file: hb_mapper.py func: hb_mapper line No: 76 parameter [output] is deprecated
+2023-03-22 14:06:29,179 file: helper.py func: helper line No: 124 Model input names: ['input_input']
+2023-03-22 14:06:29,186 file: hb_mapper_checker.py func: hb_mapper_checker line No: 104 Model type: onnx
+2023-03-22 14:06:29,186 file: hb_mapper_checker.py func: hb_mapper_checker line No: 105 march: bernoulli2
+2023-03-22 14:06:29,186 file: hb_mapper_checker.py func: hb_mapper_checker line No: 110 input names []
+2023-03-22 14:06:29,186 file: hb_mapper_checker.py func: hb_mapper_checker line No: 111 input shapes {}
+2023-03-22 14:06:29,186 file: hb_mapper_checker.py func: hb_mapper_checker line No: 117 Begin model checking....
+2023-03-22 14:06:29,187 file: build.py func: build line No: 36 [Wed Mar 22 14:06:29 2023] Start to Horizon NN Model Convert.
+2023-03-22 14:06:29,187 file: dict_parser.py func: dict_parser line No: 28 The input parameter is not specified, convert with default parameters.
+2023-03-22 14:06:29,187 file: dict_parser.py func: dict_parser line No: 513 The hbdk parameter is not specified, and the submodel will be compiled with the default parameter.
+2023-03-22 14:06:29,187 file: build.py func: build line No: 143 HorizonNN version: 0.13.3
+2023-03-22 14:06:29,187 file: build.py func: build line No: 147 HBDK version: 3.27.4
+2023-03-22 14:06:29,188 file: build.py func: build line No: 36 [Wed Mar 22 14:06:29 2023] Start to parse the onnx model.
+2023-03-22 14:06:29,927 file: onnx_parser.py func: onnx_parser line No: 146 ONNX model info:
+ONNX IR version:  6
+Opset version:    11
+Input name:       input_input, [1, 3, 288, 800]
+2023-03-22 14:06:31,252 file: build.py func: build line No: 39 [Wed Mar 22 14:06:31 2023] End to parse the onnx model.
+2023-03-22 14:06:31,257 file: build.py func: build line No: 266 Model input names: ['input_input']
+2023-03-22 14:06:31,589 file: build.py func: build line No: 537 Saving the original float model: ./.hb_check/original_float_model.onnx.
+2023-03-22 14:06:31,589 file: build.py func: build line No: 36 [Wed Mar 22 14:06:31 2023] Start to optimize the model.
+2023-03-22 14:06:39,651 file: build.py func: build line No: 39 [Wed Mar 22 14:06:39 2023] End to optimize the model.
+2023-03-22 14:06:40,002 file: build.py func: build line No: 548 Saving the optimized model: ./.hb_check/optimized_float_model.onnx.
+2023-03-22 14:06:40,002 file: build.py func: build line No: 36 [Wed Mar 22 14:06:39 2023] Start to calibrate the model.
+2023-03-22 14:06:42,683 file: calibration_data_set.py func: calibration_data_set line No: 67 There are 1 samples in the calibration data set.
+2023-03-22 14:06:43,578 file: max_calibrater.py func: max_calibrater line No: 68 Run calibration model with max method.
+2023-03-22 14:06:46,783 file: build.py func: build line No: 39 [Wed Mar 22 14:06:46 2023] End to calibrate the model.
+2023-03-22 14:06:46,783 file: build.py func: build line No: 36 [Wed Mar 22 14:06:46 2023] Start to quantize the model.
+2023-03-22 14:06:56,463 file: build.py func: build line No: 39 [Wed Mar 22 14:06:56 2023] End to quantize the model.
+2023-03-22 14:06:57,990 file: build.py func: build line No: 562 Saving the quantized model: ./.hb_check/quantized_model.onnx.
+2023-03-22 14:06:57,991 file: build.py func: build line No: 36 [Wed Mar 22 14:06:57 2023] Start to compile the model with march bernoulli2.
+2023-03-22 14:06:57,991 file: dict_parser.py func: dict_parser line No: 518 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--O0'}
+2023-03-22 14:07:00,074 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: ./lane.onnx_subgraph_0
+2023-03-22 14:07:00,992 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-03-22 14:07:01,695 file: hybrid_build.py func: hybrid_build line No: 123 Compile submodel: ./lane.onnx_subgraph_1
+2023-03-22 14:07:04,037 file: hbdk_cc.py func: hbdk_cc line No: 119 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-03-22 14:07:06,129 file: build.py func: build line No: 39 [Wed Mar 22 14:07:06 2023] End to compile the model with march bernoulli2.
+2023-03-22 14:07:06,133 file: node_info.py func: node_info line No: 54 The converted model node information:
+==================================================
+Node           ON   Subgraph  Type                
+--------------------------------------------------
+127            BPU  id(0)     HzSQuantizedConv    
+130            BPU  id(0)     HzQuantizedMaxPool  
+131            BPU  id(0)     HzSQuantizedConv    
+134            BPU  id(0)     HzSQuantizedConv    
+138            BPU  id(0)     HzSQuantizedConv    
+141            BPU  id(0)     HzSQuantizedConv    
+145            BPU  id(0)     HzSQuantizedConv    
+148            BPU  id(0)     HzSQuantizedConv    
+150            BPU  id(0)     HzSQuantizedConv    
+154            BPU  id(0)     HzSQuantizedConv    
+157            BPU  id(0)     HzSQuantizedConv    
+161            BPU  id(0)     HzSQuantizedConv    
+164            BPU  id(0)     HzSQuantizedConv    
+166            BPU  id(0)     HzSQuantizedConv    
+170            BPU  id(0)     HzSQuantizedConv    
+173            BPU  id(0)     HzSQuantizedConv    
+177            BPU  id(0)     HzSQuantizedConv    
+180            BPU  id(0)     HzSQuantizedConv    
+182            BPU  id(0)     HzSQuantizedConv    
+186            BPU  id(0)     HzSQuantizedConv    
+189            BPU  id(0)     HzSQuantizedConv    
+193            BPU  id(0)     HzSQuantizedConv    
+195            CPU  --        Reshape             
+196            BPU  id(1)     HzSQuantizedConv    
+198            BPU  id(1)     HzSQuantizedConv    
+198_reshape_0  CPU  --        Reshape
+2023-03-22 14:07:06,134 file: build.py func: build line No: 39 [Wed Mar 22 14:07:06 2023] End to Horizon NN Model Convert.
+2023-03-22 14:07:06,163 file: onnx2horizonrt.py func: onnx2horizonrt line No: 2841 ONNX model output num : 1
+2023-03-22 14:07:06,284 file: hb_mapper_checker.py func: hb_mapper_checker line No: 141 End model checking....
